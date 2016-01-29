@@ -1,0 +1,37 @@
+{
+  "name": "git-branches",
+  "version": "0.0.1",
+  "description": "Get a current repositories branches list",
+  "main": "./dist/branches.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha tests/* --compilers js:babel-core/register -t 15s",
+    "build": "./node_modules/babel-cli/bin/babel.js lib -d dist",
+    "prepublish": "npm run build",
+    "prestart": "npm run build",
+    "start": "./dist/branches.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Urucas/git-branches.git"
+  },
+  "keywords": [
+    "git",
+    "branch",
+    "branches"
+  ],
+  "author": "Urucas <hello@urucas.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Urucas/git-branches/issues"
+  },
+  "homepage": "https://github.com/Urucas/git-branches#readme",
+  "dependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "mocha": "^2.4.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
